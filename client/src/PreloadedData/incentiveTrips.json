@@ -1,0 +1,184 @@
+[	
+	{
+        "driverName": "Person1",
+        "trailerNo":"T8520",
+		"tripNo": 1,
+		"tripType": "Empty",		
+        "incentive":"400",
+        "date":"2019-02-01",
+		"id": 1
+	},
+	{
+        "driverName": "Person2",
+        "trailerNo":"T8520",
+		"tripNo": 15,
+		"tripType": "Empty",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 2
+	},
+	{
+        "driverName": "Person3",
+        "trailerNo":"T0801",
+		"tripNo": 10,
+		"tripType": "Loaded",		
+        "incentive":"200",
+        "date":"2019-02-01",
+		"id": 3
+	},
+	{
+        "driverName": "Person4",
+        "trailerNo":"T0474",
+		"tripNo": 19,
+		"tripType": "Loaded",		
+        "incentive":"300",
+        "date":"2019-02-01",
+		"id": 4
+	},
+	{
+        "driverName": "Person5",
+        "trailerNo":"T0416",
+		"tripNo": 11,
+		"tripType": "Empty",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 5
+    },
+    {
+        "driverName": "Person6",
+        "trailerNo":"T85260",
+		"tripNo": 1,
+		"tripType": "Loaded",		
+        "incentive":"500",
+        "date":"2019-02-01",
+		"id": 6
+    },
+    {
+        "driverName": "Person7",
+        "trailerNo":"T8504",
+		"tripNo": 17,
+		"tripType": "Empty",		
+        "incentive":"400",
+        "date":"2019-02-01",
+		"id": 7
+    },
+    {
+        "driverName": "Person8",
+        "trailerNo":"T8579",
+		"tripNo": 1,
+		"tripType": "Loaded",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 8
+    },
+    {
+        "driverName": "Person9",
+        "trailerNo":"T8538",
+		"tripNo": 21,
+		"tripType": "Empty",		
+        "incentive":"200",
+        "date":"2019-02-01",
+		"id": 9
+    },
+    {
+        "driverName": "Person10",
+        "trailerNo":"T8547",
+		"tripNo": 12,
+		"tripType": "Loaded",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 10
+    },
+    {
+        "driverName": "Person11",
+        "trailerNo":"T8571",
+		"tripNo": 1,
+		"tripType": "Loaded",		
+        "incentive":"300",
+        "date":"2019-02-01",
+		"id": 11
+    },
+    {
+        "driverName": "Person12",
+        "trailerNo":"T8583",
+		"tripNo": 26,
+		"tripType": "Loaded",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 12
+    },
+    {
+        "driverName": "Person13",
+        "trailerNo":"T85213",
+		"tripNo": 38,
+		"tripType": "Empty",		
+        "incentive":"200",
+        "date":"2019-02-01",
+		"id": 13
+    },
+    {
+        "driverName": "Person14",
+        "trailerNo":"T8501",
+		"tripNo": 41,
+		"tripType": "Empty",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 14
+    },
+    {
+        "driverName": "Person15",
+        "trailerNo":"T8592",
+		"tripNo": 27,
+		"tripType": "Loaded",		
+        "incentive":"400",
+        "date":"2019-02-01",
+		"id": 15
+    },
+    {
+        "driverName": "Person16",
+        "trailerNo":"T8518",
+		"tripNo": 45,
+		"tripType": "Loaded",		
+        "incentive":"400",
+        "date":"2019-02-01",
+		"id": 16
+    },
+    {
+        "driverName": "Person17",
+        "trailerNo":"T8508",
+		"tripNo": 67,
+		"tripType": "Empty",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 17
+    },
+    {
+        "driverName": "Person18",
+        "trailerNo":"T8592",
+		"tripNo": 18,
+		"tripType": "Empty",		
+        "incentive":"400",
+        "date":"2019-02-01",
+		"id": 18
+    },
+    {
+        "driverName": "Person19",
+        "trailerNo":"T8585",
+		"tripNo": 25,
+		"tripType": "Loaded",		
+        "incentive":"100",
+        "date":"2019-02-01",
+		"id": 19
+    },
+    {
+        "driverName": "Person20",
+        "trailerNo":"T8520",
+		"tripNo": 39,
+		"tripType": "Loaded",		
+        "incentive":"200",
+        "date":"2019-02-01",
+		"id": 20
+	}
+
+]
+

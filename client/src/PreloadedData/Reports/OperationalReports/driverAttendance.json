@@ -1,0 +1,27 @@
+[
+	{
+		"date": "2019-03-21",
+		"driver": "Person1",
+		"inTime": "8:00 A.M",
+		"outTime": "10:00 A.M"
+	},
+	{
+		"date": "2019-03-21",
+		"driver": "Person2",
+		"inTime": "8:00 A.M",
+		"outTime": "10:00 A.M"
+	},
+	{
+		"date": "2019-03-21",
+		"driver": "Person3",
+		"inTime": "8:00 A.M",
+		"outTime": "10:00 A.M"
+	},
+	{
+		"date": "2019-03-21",
+		"driver": "Person4",
+		"inTime": "8:00 A.M",
+		"outTime": "10:00 A.M"
+	}
+
+]

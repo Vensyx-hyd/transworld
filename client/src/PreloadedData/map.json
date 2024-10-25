@@ -1,0 +1,7 @@
+{
+    "shelters":[
+    {"id":1,"shelter":"Decathlon Whitefield ,Trailer1","longitude": 77.70082000,"latitude":12.99461900},
+    {"id":2,"shelter":"Brigade Arcade", "longitude":77.70262230 ,"latitude":12.99206580 },
+    {"id":3,"shelter":"VRMall","longitude":77.69529000 , "latitude":12.99605300 },
+    {"id":4,"shelter":"PSN","longitude": 77.72898200, "latitude": 12.99403000}
+]}

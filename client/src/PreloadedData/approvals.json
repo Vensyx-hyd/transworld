@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Fuel",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Maintenance",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Leave",
+		"selectedMenu": "selectedMenuTab"
+	}
+]

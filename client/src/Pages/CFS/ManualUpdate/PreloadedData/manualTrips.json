@@ -1,0 +1,15 @@
+[
+	{
+		"title": "Attendance",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Trips",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Mobile",
+		"selectedMenu": "selectedMenuTab"
+	}
+
+]

@@ -1,0 +1,15 @@
+[
+	{
+		"title": "Completed",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Running",
+		"selectedMenu": "selectedMenuTab"
+	},
+	{
+		"title": "Scheduled",
+		"selectedMenu": "selectedMenuTab"
+	}
+
+]

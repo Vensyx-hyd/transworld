@@ -1,0 +1,45 @@
+[
+	{
+		"tripId": 12,
+		"tripType": "Loaded",
+		"startLocation": "Terminal1",
+		"endLocation": "Terminal4",
+		"estStartTime":"9:00 AM",
+		"estEndTime":"12:00 PM",
+		"actualEndTime": "12:00 PM",
+		"driverName": "Person 1",
+		"distanceCovered": 300,
+		"fuel":10,
+		"incentive":500,
+		"trailerNumber": 3456
+	},
+	{
+		"tripId": 34,
+		"tripType": "Empty",
+		"startLocation": "Terminal3",
+		"endLocation": "Terminal9",
+		"estStartTime":"10:00 AM",
+		"estEndTime":"12:00 PM",
+		"actualEndTime": "12:00 PM",
+		"driverName": "Person 2",
+		"distanceCovered": 100,
+		"fuel":3,
+		"incentive":800,
+		"trailerNumber": 346
+	},
+	{
+		"tripId": 56,
+		"tripType": "Empty",
+		"startLocation": "Terminal1",
+		"endLocation": "Terminal8",
+		"estStartTime":"10:00 AM",
+		"estEndTime":"11:00 AM",
+		"actualEndTime": "12:00 PM",
+		"driverName": "Person 3",
+		"distanceCovered": 500,
+		"fuel":15,
+		"incentive":1000,
+		"trailerNumber": 36
+	}
+
+]

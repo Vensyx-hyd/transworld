@@ -1,0 +1,43 @@
+[
+	{
+		"trailerNo": "T1458",
+		"distance": "1200",
+        "lastServiceDate": "2019-01-01", 
+		"dueServiceDate": "2019-03-01",
+		"lastServiceDistance": "500", 
+        "dueServiceDistance": "1500"
+	},
+	{
+		"trailerNo": "T1458",
+		"distance": "2000",
+        "lastServiceDate": "2019-01-10", 
+		"dueServiceDate": "2019-03-10",
+		"lastServiceDistance": "500", 
+        "dueServiceDistance": "1500"
+	},
+	{
+		"trailerNo": "T1458",
+		"distance": "3500",
+        "lastServiceDate": "2019-01-15", 
+		"dueServiceDate": "2019-03-15",
+		"lastServiceDistance": "500", 
+        "dueServiceDistance": "1500"
+	},
+	{
+		"trailerNo": "T1458",
+		"distance": "2800",
+        "lastServiceDate": "2019-01-20", 
+		"dueServiceDate": "2019-03-20",
+		"lastServiceDistance": "500", 
+        "dueServiceDistance": "1500"
+	},
+	{
+		"trailerNo": "T1458",
+		"distance": "1900",
+        "lastServiceDate": "2019-01-01", 
+		"dueServiceDate": "2019-03-01",
+		"lastServiceDistance": "500", 
+        "dueServiceDistance": "1500"
+	}			
+]
+

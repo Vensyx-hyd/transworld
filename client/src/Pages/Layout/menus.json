@@ -1,0 +1,208 @@
+{  
+  "CFSManager": {
+    "cfsHeader": "CFS Manager",
+    "mainTitle": "MENU",
+    "menus": [
+      {
+        "title": "Dashboard",
+        "icon": "/assets/icons/CFSManager/dashboard.svg",
+        "navLink": "/dashboard"
+      },
+      {
+        "title": "Trips",
+        "icon": "/assets/icons/CFSManager/trips.svg",
+        "navLink": "/trips"
+      },
+      {
+        "title": "Approvals",
+        "icon": "/assets/icons/CFSManager/approvals.svg",
+        "navLink": "/approvals"
+      },  
+      {
+        "title": "Fuel",
+        "icon": "/assets/icons/CFSManager/fuel.svg",
+        "navLink": "/fuel"
+      },
+      {
+        "title": "Communication",
+        "icon": "/assets/icons/CFSManager/communication.svg",
+        "navLink": "/communication"
+      },
+      {
+        "title": "Training",
+        "icon": "/assets/icons/CFSManager/training.svg",
+        "navLink": "/training"
+      },  
+      {
+        "title": "Hire Trailer",
+        "icon": "/assets/icons/CFSManager/hire_trailer.svg",
+        "navLink": "/hire-trailer"
+      },
+      {
+        "title": "Manual Update",
+        "icon": "/assets/icons/Admin/manage_users.svg",
+        "navLink": "/manual-update"
+      }
+    ]
+  },
+  "Admin": {
+    "adminHeader": "Administrator",
+    "mainTitle": "MENU",
+    "menus": [
+      {
+        "title": "Manage Users",
+        "icon": "/assets/icons/Admin/manage_users.svg",
+        "navLink": "/manage-users"
+      },
+      {
+        "title": "Manage Trips",
+        "icon": "/assets/icons/Admin/manage_trips.svg",
+        "navLink": "/manage-trips"
+      },
+      {
+        "title": "Connect Mobile",
+        "icon": "/assets/icons/Admin/connect_mobile.svg",
+        "navLink": "/connect-mobile"
+      },
+      {
+        "title": "Driver Roaster",
+        "icon": "/assets/icons/Admin/driver_roaster.svg",
+        "navLink": "/driver-roaster"
+      },
+      {
+        "title": "Upload Master Data",
+        "icon": "/assets/icons/Admin/upload_master.svg",
+        "navLink": "/upload-master-data"
+      },      
+      {
+        "title": "Trip Intelligence",
+        "icon": "/assets/icons/Admin/trip_intelligence.svg",
+        "navLink": "/trip-intelligence"
+      },
+      {
+        "title": "Vendor",
+        "icon": "/assets/icons/Admin/vendor_registration.svg",
+        "navLink": "/vendor-registration",
+        "subMenus":[
+          {
+            "title": "Registration",
+            "navLink": "/vendor-registration"
+          },
+          {
+            "title": "Services",
+            "navLink": "/vendor-registration/services"
+          },
+          {
+            "title": "Services Plans",
+            "navLink": "/vendor-registration/service-plans"
+          },
+          {
+            "title": "Master",
+            "icon": "/assets/icons/Reports/master.svg",
+            "navLink": "/vendor-registration/master"
+          }
+        ]
+      }
+    ]
+  },
+  "reports": {
+    "mainTitle": "REPORTS",
+    "menus": [
+      {
+        "title": "Master",
+        "icon": "/assets/icons/Reports/master.svg",
+        "navLink": "/report/master-reports/driver",
+        "subMenus": [
+          {
+            "title": "Driver",
+            "navLink": "/report/master-reports/driver"
+          },
+          {
+            "title": "Maintanence",
+            "navLink": "/report/master-reports/maintanence-Schedule"
+          },
+          {
+            "title": "Trailer",
+            "navLink": "/report/master-reports/trailer"
+          },          
+          {
+            "title": "Training",
+            "navLink": "/report/master-reports/training-Calender"
+          }, 
+          {
+            "title": "Trip Type",
+            "navLink": "/report/master-reports/trip-Type"
+          }         
+        ]
+      },
+      {
+        "title": "Daily",
+        "icon": "/assets/icons/Reports/daily_report.svg",
+        "navLink": "/report/daily-reports/pendency",
+        "subMenus": [
+          {
+            "title": "Pendency",
+            "navLink": "/report/daily-reports/pendency"
+          },
+          {
+            "title": "Trip",
+            "navLink": "/report/daily-reports/trip"
+          },
+          {
+            "title": "TAT",
+            "navLink": "/report/daily-reports/TAT"
+          }
+        ]
+      },
+      {
+        "title": "Operational",
+        "icon": "/assets/icons/Reports/operational.svg",
+        "navLink": "/report/operational-reports/diesel-Utilization",
+        "subMenus": [
+          {
+            "title": "Adhoc Maintenance",
+            "navLink": "/report/operational-reports/adhoc-Maintenance"
+          },
+          {
+            "title": "Diesel Utilization",
+            "navLink": "/report/operational-reports/diesel-Utilization"
+          },
+          {
+            "title": "Driver Attendance",
+            "navLink": "/report/operational-reports/driver-Attendance"
+          },
+          {
+            "title": "Driver Training",
+            "navLink": "/report/operational-reports/driver-Training"
+          },
+          {
+            "title": "Driver Roaster",
+            "navLink": "/report/operational-reports/driver-Roaster"
+          },
+          {
+            "title": "Hire Trailer",
+            "navLink": "/report/operational-reports/hire-Trailer"
+          },
+          {
+            "title": "LGR",
+            "navLink": "/report/operational-reports/LGR"
+          }, 
+          {
+            "title": "Trailer Performance",
+            "navLink": "/report/operational-reports/trailer-Performance"
+          }                   
+        ]
+      }
+    ]
+  },
+  "CEO":{
+    "mainTitle": "",
+    "menus": [
+      {
+        "title": "CEO-Dashboard",
+        "icon": "/assets/icons/Dashboard.svg",
+        "navLink": "/ceo-dashboard"
+      }
+    ]
+  }
+}

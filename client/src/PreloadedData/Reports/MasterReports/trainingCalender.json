@@ -1,0 +1,24 @@
+[
+	{
+		"trainingName": "App",
+		"trainingType": "Technical",
+		"location": "Chennai",
+		"trainingDate": "2019-03-12",
+		"driverName": "Person1"
+	},
+	{
+		"trainingName": "Load",
+		"trainingType": "Physical",
+		"location": "Bangalore",
+		"trainingDate": "2019-03-14",
+		"driverName": "Person2"
+	},
+	{
+		"trainingName": "Load",
+		"trainingType": "Physical",
+		"location": "Chennai",
+		"trainingDate": "2019-03-15",
+		"driverName": "Person3"
+	}
+
+]

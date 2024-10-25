@@ -1,0 +1,21 @@
+[
+	{
+		"Vendor_Reg_ID": 1234,
+		"Vendor_Name": "Vendor 1",
+		"Trailer_Number": 34,
+		"Contact_Number": 98754321,
+		"fromDate": "2019-02-14",
+		"toDate": "2019-02-16",
+		"hirePrice": 3000
+	},
+	{
+		"Vendor_Reg_ID": 5678,
+		"Vendor_Name": "Vendor 2",
+		"Trailer_Number": 89,
+		"Contact_Number": 123456789,
+		"fromDate": "2019-02-13",
+		"toDate": "2019-02-19",
+		"hirePrice": 5000
+	}
+
+]

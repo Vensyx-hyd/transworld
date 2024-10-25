@@ -1,0 +1,291 @@
+[
+	{
+		"trailerNo": "T0001",
+		"distanceCovered": 100,
+		"fuelConsumed": 5,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0002",
+		"distanceCovered": 80,
+		"fuelConsumed": 4,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0003",
+		"distanceCovered": 120,
+		"fuelConsumed": 6,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0004",
+		"distanceCovered": 180,
+		"fuelConsumed": 9,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0006",
+		"distanceCovered": 80,
+		"fuelConsumed": 4,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0007",
+		"distanceCovered": 200,
+		"fuelConsumed": 10,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0008",
+		"distanceCovered": 140,
+		"fuelConsumed": 7,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0009",
+		"distanceCovered": 160,
+		"fuelConsumed": 8,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	},
+	{
+		"trailerNo": "T0010",
+		"distanceCovered": 60,
+		"fuelConsumed": 3,
+		"driverDetails": [
+			{
+				"date": "2/01/2019",
+				"distance": 60,
+				"fuel": 3
+			},
+			{
+				"date": "3/01/2019",
+				"distance": 100,
+				"fuel": 5
+			},
+			{
+				"date": "4/01/2019",
+				"distance": 80,
+				"fuel": 4
+			},
+			{
+				"date": "5/01/2019",
+				"distance": 120,
+				"fuel": 6
+			},
+			{
+				"date": "6/01/2019",
+				"distance": 160,
+				"fuel": 8
+			}
+		]
+	}
+]
+

@@ -1,0 +1,433 @@
+html{
+    background: #e9e9e9;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #e9e9e9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  /*LoginIn*/
+  .logo {
+      width: 250px;
+      height: 55px;
+  }
+  .logo:hover {
+      cursor: pointer;
+  }
+  .logo1 {
+      width: 150px;
+      height: 38px;
+  }
+  .csv {    
+    width: 50px;  
+    margin-top: 1rem;
+  }
+  .cancelIcon {
+    width: 25px; 
+  }
+  .createButton {
+    min-height: 40px;
+  }
+  .tick {
+    position: relative;
+    margin: 0 auto;
+    height: 35px;
+    width: 35px;  
+    margin-bottom: 20px;
+  }
+  .calendar {
+    float: right;
+    height: 30px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  .calendarLable {
+    font-size: 12px;
+    color: #495057de;
+  }
+  .mark {
+      width: 26px;
+      background: none;
+  }
+  .text {
+      color: #ffffff;
+  }
+  .signin-page {
+      height: 80vh;
+      width: 125vh;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10vh;
+      box-shadow: 0 4px 4px 0 #c5c0c0;
+  }
+  .primary-text{
+      color: #12A472;
+  }
+  .primary-design{
+    background-color: #ffffff; 
+    border-radius: 5px;
+  }
+  .primary-button{
+      padding: 6px 0 6px 0;
+      border-radius: 22px;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      background: #ffffff;
+      color: #332c6f;
+      font-weight: 600;
+      margin-top: 1rem;
+      width: 25vh;
+  }
+  .primary-button:focus, .primary-button:hover{    
+      color:  #12A474;    
+  }
+  .background-design {
+      background-color: #332C6F;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  .tablePad {
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .form {
+      width: 27vh; 
+      border-color: none;
+  }
+  .form1{
+      width: 40vh;
+      margin-top: 4vh !important;
+  }
+  .root {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .formControl {
+      min-width: 100%;
+  }
+  
+  /*LoginIn*/
+  .selectionControl{
+      cursor: pointer;
+      margin-top: 1vh;
+      margin-left: 5vh;
+  }
+  .selectionControlPdf {
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+  }
+  /* Dashboard css  */
+  .text-color {
+      color: #b8b5d7cc;
+      font-weight: 600;
+  }
+  .icon-design {
+      font-size: 14px;
+      padding: 4px;
+      margin-right: 10px;
+      color: #ffffff;
+      border-radius: 4px;
+      width: 25px;
+      display: inline-block;
+      height: 25px;
+      text-align: center;
+  }
+  .icon-design-arrow {
+      font-size: 14px;
+      padding: 4px;
+      margin-right: 10px;
+      color: #ffffff;
+      border-radius: 4px;
+      width: 20px;
+      display: inline-block;
+      height: 20px;
+      text-align: center;
+  }
+  .navmenu-text{    
+      font-weight: 400;
+  }
+  .profileAvatar{
+      position: absolute;
+      right: 4vh;
+      display: block;
+  }
+  .avatar:hover{
+      cursor: pointer;
+  }
+  #chart {
+      height: 250px;
+      margin: 0 auto;
+      position: relative;
+      display: block;
+  }
+  #chartOne {
+      height: 250px;
+      margin: 0 auto;
+      position: relative;
+      display: block;
+  }
+  .pie {
+    margin: 20px;
+  }
+  svg {
+      float: left;
+  }
+  .legend {
+    float: left;
+    font-family: "Verdana";
+    font-size: .7em;
+  }
+  .pie text {
+    font-family: "Verdana";
+    fill: #000000;
+  }
+  .pie .name-text{
+    font-size: .8em;
+  }
+  .pie .value-text{
+    font-size: 3em;
+  }
+  
+  /* Dashboard css  */
+  
+  /* Report driver trips */
+  .details-section{
+      border: 1px solid #d3d3d3;
+      margin: 24px;
+  }
+  .search-box-design{
+      border-radius: 22px;
+      padding: 5px;
+      outline: none;
+      padding-left: 3vh;
+      color: #332c6f;
+      font-weight: 500;
+      border: none;   
+      background-color:  #d7d7d7;
+  
+  }
+  /* Report driver trips */
+  .pad {
+      padding: 4px 6px 4px 24px;
+  }
+  .hideApporve{
+      visibility: hidden;
+  }
+  .approveButton{   
+      border: 0;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 22px;
+      cursor: pointer;
+      color: #fff;
+      padding: 6px;        
+      background: #12A472;
+      font-size: 13px;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .cancelButton{
+      max-width: 100px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 400;
+      color: #de2b2b;
+      margin-left: 5vh;
+  }
+  .selectedMenuTab{
+      background: #332c6f;
+      color: #fff;
+      font-weight: 600;
+      padding: 14px;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 4px;
+  }
+  .tabDesign{
+      color: #332c6f;
+      padding: 13px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #b8b5d766;
+  }
+  .primary-add-button{
+      background: #14A474;
+      color: #ffffff;
+      border: none;
+      border-radius: 22px;
+      padding: 5px;   
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      height: 5vh;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .primary-add-button-submit {
+      background: #14A474;
+      color: #ffffff;
+      border: none;
+      border-radius: 22px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      height: 4vh;
+      width: 15vh;
+  }
+  .cancel {
+      color: #de2b2b;
+      margin-top: 0.25rem;
+      margin-left: 3rem;
+      font-weight: bold;
+      font-size: 14px;
+  }
+  .tableShrunk{
+      padding-left: 0px;
+      position: absolute;
+      right: 40px;
+      padding-top: 10px;
+  }
+  .back {
+      background: #E9E9E9;
+  }
+  .fix {
+      margin: 0 !important;
+  }
+  .margin {
+      margin-bottom: 0px;
+  }
+  .hovered:hover {
+      border-left: 5px solid #12A472;    
+      background-color: #b8b5d766;
+      transition: 0.1s;
+      cursor: pointer;
+      font-weight: 600;
+  }
+  .hovered:active {
+    background-color: #b8b5d766;
+    font-weight: 600;
+  }
+  .custom {
+    background-color: #332C6F;
+    height: 40px;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    color: #ffffff;
+  }  
+  .customHeader {
+    background-color: #332C6F;
+    height: 40px;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .titleCard {
+      color: #332C6F;
+      font-weight: bold;
+  }
+  .titleColor {
+    color: #989595 !important;
+    font-weight: 600;
+  }
+  .fieldColor {
+      color: #332C6F !important;
+  }
+  .MuiTableCell{
+      color: #000000;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+  }
+  .datePicker {
+      border-radius: 22px;
+      border: none;
+      padding: 5px;
+      padding-left: 12px;
+  }
+  .point:hover {
+      font-weight: 600;
+      transition: 0.1s;
+  }
+  .modifyButton {
+      position: relative;
+      top: 2.5vh;
+      right: 8vh;
+  }
+  .modifyButtonHire {
+      position: relative;
+      top: 2.5vh;
+      right: 2vh;
+  }
+  .cancelLabel {
+      padding-left: 3rem;
+      position: relative;
+      bottom: 5vh;
+  }
+  .cancelLabelHire{
+      padding-left: 8vh;
+      position: relative;
+      bottom: 3vh;
+  }
+  .cancelMsgLabel{
+      color: #de2b2b;
+      margin-top: 0.25rem;
+      margin-left: 3rem;
+      font-weight: 500;  
+  }
+  .messageContainer{
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .msgPad{
+      margin-top: 1vh;
+      margin-bottom: 3vh;
+  }
+  .browse{
+      color: #989595;
+      font-weight: 600 !important;
+      text-align: center;
+  }
+  /* background-color: #b8b5d766; */  
+
+.k-pager-numbers .k-state-selected {
+    color: #fff;
+    background-color: #14A474;
+    font-weight: 600;
+}
+.k-grid-header {
+    /* background-color: #d7d7d7d7; */
+    background-color: #b8b5d766;
+    height: 45px;
+    /* color: #595252; */
+    color: #332C6F;
+}
+.k-widget {
+    font-size: 14px;
+    line-height: 1;
+}
+.k-grid {
+    color: #505050;
+}
+.center {
+    margin-top: 80%;
+}
