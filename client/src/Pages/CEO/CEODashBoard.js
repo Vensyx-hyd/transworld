@@ -67,6 +67,9 @@ class CEODashBoard extends React.Component {
 
             tripsData: [],
             formattedTripDates: [],
+
+            driversData: [],
+            formattedDriverDates: [],
         };
         this.refresh = this.refresh.bind(this);
         this.selectChart = this.selectChart.bind(this);
@@ -273,7 +276,8 @@ class CEODashBoard extends React.Component {
     trailersPerformance() {
         AppAPI.homePerformanceTrailers.get(null, null)
             .then((result) => {
-                const _resultData = result.trailers; // Using the entire array
+                const _resultData = result.trailers;
+                console.log("trailersPerformance",result.trailers)
     
                 let data = [];
                 _resultData.forEach((trailer, index) => {
@@ -284,7 +288,7 @@ class CEODashBoard extends React.Component {
                         const uniqueKey = `${chartKey}_${index}`;
                         
                         const obj = {
-                            key: uniqueKey,  // Unique key with index
+                            key: uniqueKey,
                             value: trailer[key]
                         };
                         console.log("object", obj);
@@ -298,52 +302,103 @@ class CEODashBoard extends React.Component {
                 this.props.setTrailersPerformanceChartData(data);
             })
             .catch(e => console.log(e));
-        // AppAPI.homePerformanceTrailers.get(null, null).then((result) => {
-        //     const _resultData = result.trailers[0];
-        //     let data = [];
-        //     for (let key in _resultData) {
-        //         const obj = {
-        //             key: Constants.strings.CEOTrailersPerformanceChart[key],
-        //             value: _resultData[key]
-        //         };
-        //         this.setState({
-        //             getApi: true
-        //         })
-        //         data.push(obj)
-        //     }
-        //     this.props.setTrailersPerformanceChartData(data);
-        // }).catch(e => console.log(e))
     }
 
     driversPerformance() {
-        AppAPI.homePerformanceDrivers.get(null, null).then((result) => {
-            const _resultData = result.drivers[0];
-            console.log("driversPerformance", result)
-            let data = [];
-            for (let key in _resultData) {
-                const chartKey = Constants.strings.CEODriversPerformanceChart[key] || key;
-                if (chartKey === "date") {
-                    this.setState({
-                        driversDate: _resultData[key],
-                    })
-                }
-                const obj = {
-                    key: chartKey,
-                    value: _resultData[key]
-                };
+        AppAPI.homePerformanceDrivers.get(null, null)
+            .then((result) => {
+                const _resultData = result.drivers;
+                console.log("driversPerformance", result.drivers);
+    
+                let data = [];
+                let formattedDates = [];
+                _resultData.forEach((driver, index) => {
+                    let formattedDate = '';
+                    for (let key in driver) {
+                        const chartKey = Constants.strings.CEODriversPerformanceChart[key] || key;
+                        
+                        // Append driver index to keys to avoid merging
+                        const uniqueKey = `${chartKey}_${index}`;
+                        
+                        // If the key is "date", format and store the date
+                        if (chartKey === "date") {
+                            const rawDate = new Date(driver[key]);
+                            if (!isNaN(rawDate)) {
+                                // Format the date as "YYYY-MM-DD"
+                                const year = rawDate.getFullYear();
+                                const month = (rawDate.getMonth() + 1).toString().padStart(2, '0');
+                                const day = rawDate.getDate().toString().padStart(2, '0');
+                                formattedDate = `${year}-${month}-${day}`;
+                            } else {
+                                console.error("Invalid date format:", driver[key]);
+                            }
+                        }
+                        
+                        const obj = {
+                            key: uniqueKey,
+                            value: driver[key]
+                        };
+                        data.push(obj);
+                    }
+    
+                    // After each driver loop, push the formatted date
+                    if (formattedDate) {
+                        formattedDates.push({
+                            driverIndex: index, 
+                            date: formattedDate
+                        });
+                    }
+                });
+    
                 this.setState({
-                    getApi: true
-                })
-                data.push(obj)
-            }
-            this.props.setDriversPerformanceChartData(data);
-        }).catch(e => console.log(e))
+                    getApi: true,
+                    driversData: data, 
+                    formattedDriverDates: formattedDates,
+                });
+    
+                // Optional: update the last driver's date to `driversDate` state if needed
+                if (formattedDates.length > 0) {
+                    const lastDriverDate = formattedDates[formattedDates.length - 1].date;
+                    this.setState({
+                        driversDate: lastDriverDate
+                    });
+                }
+    
+                this.props.setDriversPerformanceChartData(data);
+                this.formatDriversDate();
+            })
+            .catch(e => console.log(e));
     }
+    
+    // driversPerformance() {
+    //     AppAPI.homePerformanceDrivers.get(null, null).then((result) => {
+    //         const _resultData = result.drivers[0];
+    //         console.log("driversPerformance", result)
+    //         let data = [];
+    //         for (let key in _resultData) {
+    //             const chartKey = Constants.strings.CEODriversPerformanceChart[key] || key;
+    //             if (chartKey === "date") {
+    //                 this.setState({
+    //                     driversDate: _resultData[key],
+    //                 })
+    //             }
+    //             const obj = {
+    //                 key: chartKey,
+    //                 value: _resultData[key]
+    //             };
+    //             this.setState({
+    //                 getApi: true
+    //             })
+    //             data.push(obj)
+    //         }
+    //         this.props.setDriversPerformanceChartData(data);
+    //     }).catch(e => console.log(e))
+    // }
 
     tripsPerformance() {
         AppAPI.homePerformanceTrips.get(null, null)
             .then((result) => {
-                const _resultData = result.trips; // Using the entire array
+                const _resultData = result.trips;
                 console.log("tripsPerformance", result.trips);
     
                 let data = [];
@@ -371,7 +426,7 @@ class CEODashBoard extends React.Component {
                         }
                         
                         const obj = {
-                            key: uniqueKey,  // Unique key with index
+                            key: uniqueKey,
                             value: trip[key]
                         };
                         data.push(obj);
@@ -463,45 +518,105 @@ class CEODashBoard extends React.Component {
         const chartData = this.props.state.trailerPerformance.chartData;
         return chartData.length > 0
             ?
-            <BarChart data={chartData} />
+            <BarChart data={chartData}/>
             :
             <div className="d-flex justify-content-center">
                 <Loading />
             </div>;
     }
 
-    renderDriverTrips() {
+    renderDriverTrips(selectedDate) {
         const chartData = this.props.state.driverTrips.chartData;
+        const { currentDate1, yesterday1, dayBeforeYesterday1 } = this.getDriverDateButtons();
 
-        const filteredChartData = chartData.filter(entry => {
-            const hasDate = entry.key !== "date" && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$/.test(entry.value);
 
-            return hasDate;
+        let filterData = [];
+
+        if(dayBeforeYesterday1 == selectedDate){
+            const keysToFilter = [
+                "One Trip_0",
+                "Two Trips_0",
+                "Three Trips_0",
+                "Four Trips_0",
+                "driver_5_0"
+            ];
+            filterData = [];
+            filterData = chartData.filter((data)=>keysToFilter.includes(data.key));
+            // let filterdata = chartData.filter((data)=>keysToFilter.includes(data.key))
+            // filterData.push(filterdata)
+        } else if(yesterday1 == selectedDate){
+            const keysToFilter = [
+                "One Trip_1",
+                "Two Trips_1",
+                "Three Trips_1",
+                "Four Trips_1",
+                "driver_5_1"
+            ];
+            filterData = [];
+            filterData = chartData.filter((data)=>keysToFilter.includes(data.key));
+            // let filterdata = chartData.filter((data)=>keysToFilter.includes(data.key))
+            // filterData.push(filterdata)
+        } else if(currentDate1 == selectedDate){
+            const keysToFilter = [
+                "One Trip_2",
+                "Two Trips_2",
+                "Three Trips_2",
+                "Four Trips_2",
+                "driver_5_2"
+            ];
+            filterData = [];
+            filterData = chartData.filter((data)=>keysToFilter.includes(data.key));
+            // let filterdata = chartData.filter((data)=>keysToFilter.includes(data.key))
+            // filterData.push(filterdata)
+        } 
+        console.log("filterData-1",filterData)
+
+        const modifiedFilterData = filterData.map(data => {
+            let displayKey = data.key.replace(/_[0-9]+$/, ""); // Remove suffix (e.g., "_0", "_1", "_2")
+            
+            // Standardize "driver_5" to "Five Trips"
+            if (displayKey === "driver_5") {
+                displayKey = "Five Trips";
+            }
+    
+            return {
+                ...data,
+                key: displayKey
+            };
         });
-        const filteredChartData1 = filteredChartData.map(entry => ({
-            ...entry,
-            key: entry.key === undefined || entry.key === "driver_5" ? 'Five Trips' : entry.key,
-            value: typeof entry.value === 'string' ? Number(entry.value) : entry.value
-        }));
-
-        return filteredChartData1.length > 0
-            ? <BarChart data={filteredChartData1} />
+    
+        return chartData.length > 0
+            ? <BarChart data={modifiedFilterData && modifiedFilterData} />
             : (
                 <div className="d-flex justify-content-center">
                     <Loading />
                 </div>
             );
     }
-
+    
+    
+    
     // renderDriverTrips() {
     //     const chartData = this.props.state.driverTrips.chartData;
-    //     return chartData.length > 0
-    //         ?
-    //         <BarChart data={chartData} />
-    //         :
-    //         <div className="d-flex justify-content-center">
-    //             <Loading />
-    //         </div>;
+
+    //     const filteredChartData = chartData.filter(entry => {
+    //         const hasDate = entry.key !== "date" && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z$/.test(entry.value);
+
+    //         return hasDate;
+    //     });
+    //     const filteredChartData1 = filteredChartData.map(entry => ({
+    //         ...entry,
+    //         key: entry.key === undefined || entry.key === "driver_5" ? 'Five Trips' : entry.key,
+    //         value: typeof entry.value === 'string' ? Number(entry.value) : entry.value
+    //     }));
+
+    //     return filteredChartData1.length > 0
+    //         ? <BarChart data={filteredChartData1} />
+    //         : (
+    //             <div className="d-flex justify-content-center">
+    //                 <Loading />
+    //             </div>
+    //         );
     // }
 
     renderTrips(selectedDate) {
@@ -511,18 +626,8 @@ class CEODashBoard extends React.Component {
 
         const combinedChartData = [...chartData, ...chartData1];
         let filterData = [];
-        console.log("filterData",filterData)
-        console.log("currentDate",currentDate)
-        console.log("selectedDate",selectedDate)
 
-
-        // console.log("chartDataTrips", chartData);
-        // console.log("chartDatatrailerPerformance", chartData1);
-        console.log("combinedChartData", combinedChartData);
-        // console.log("tripdate", this.state.tripdate);
-        // console.log("currentdate", this.state.currentDate);
-
-        if(currentDate == selectedDate){
+        if(dayBeforeYesterday == selectedDate){
             const keysToFilter = [
                 "ceo_tdr_planned_0",
                 "ceo_tdr_loaded_0",
@@ -552,7 +657,7 @@ class CEODashBoard extends React.Component {
             ];
             let filterdata = combinedChartData.filter((data)=>keysToFilter.includes(data.key))
             filterData.push(filterdata)
-        } else if(dayBeforeYesterday == selectedDate){
+        } else if(currentDate == selectedDate){
             const keysToFilter = [
                 "ceo_tdr_planned_2",
                 "ceo_tdr_loaded_2",
@@ -586,7 +691,7 @@ class CEODashBoard extends React.Component {
                                 key={index}
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'column', // Stack box and text in a column
+                                    flexDirection: 'column',
                                     alignItems: 'center',
                                 }}
                             >
@@ -622,18 +727,6 @@ class CEODashBoard extends React.Component {
                 </div>
             );
     }
-
-    // renderTrips() {
-    //     const chartData = this.props.state.trips.chartData;
-    //     console.log("renderTrips", chartData)
-    //     return chartData.length > 0
-    //         ?
-    //         <BarChart data={chartData} />
-    //         :
-    //         <div className="d-flex justify-content-center">
-    //             <Loading />
-    //         </div>;
-    // }
 
     // Function to render trips or display no match message
     renderTripsBasedOnDate() {
@@ -677,7 +770,8 @@ class CEODashBoard extends React.Component {
     // Function to render trips or display no match message
     renderDriversBasedOnDate() {
         const { currentDate1, yesterday1, dayBeforeYesterday1 } = this.getDriverDateButtons();
-        const { selectedDate1, driverdate } = this.state;
+        const { selectedDate1, driverdate, formattedDriverDates } = this.state;
+        console.log("formattedDriverDates",formattedDriverDates)
 
         const selectedDriverDate =
             selectedDate1 === "currentDate" ? currentDate1 :
@@ -685,11 +779,12 @@ class CEODashBoard extends React.Component {
                     dayBeforeYesterday1;
 
         // Check if tripdate matches the selected date
-        if (driverdate === selectedDriverDate) {
+        // if (driverdate === selectedDriverDate) {
+        if(formattedDriverDates.some(drDate => drDate.date == selectedDriverDate)){
             return (
                 <>
                     <h6 className="titleColor">Driver Trips</h6>
-                    {this.renderDriverTrips()}
+                    {this.renderDriverTrips(selectedDriverDate)}
                 </>
 
                 // <div className="row">

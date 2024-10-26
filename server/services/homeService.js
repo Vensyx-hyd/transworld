@@ -28,15 +28,16 @@ class HomeService {
   }
 
   async getDriverPerformance () {
-    return await this.db.query("select ceo_dtr_one as driver_1,ceo_dtr_two as driver_2,ceo_dtr_three as driver_3 ,ceo_dtr_four as driver_4, ceo_dtr_fiveplus as driver_5, ceo_dtr_dt as date  from  ceo_driver_trip_report ");//where date(ceo_dtr_dt)=date(sysdate())
+    return await this.db.query("select ceo_dtr_one as driver_1,ceo_dtr_two as driver_2,ceo_dtr_three as driver_3 ,ceo_dtr_four as driver_4, ceo_dtr_fiveplus as driver_5, ceo_dtr_dt as date  from  ceo_driver_trip_report where substr(ceo_dtr_dt,1,10) in (substr(now(),1,10),substr(DATE_SUB(now(), INTERVAL 1 DAY),1,10), substr(DATE_SUB(now(), INTERVAL 2 DAY),1,10))");
+    // return await this.db.query("select ceo_dtr_one as driver_1,ceo_dtr_two as driver_2,ceo_dtr_three as driver_3 ,ceo_dtr_four as driver_4, ceo_dtr_fiveplus as driver_5, ceo_dtr_dt as date  from  ceo_driver_trip_report ");//where date(ceo_dtr_dt)=date(sysdate())
   };
 
   async getTrailerPerformance (){
-    return await this.db.query("select ceo_tpr_trips as trips_done ,ceo_tpr_fuel_spent as  diesel_issued from ceo_trailer_per_report ");//where date(ceo_tpr_dt)=date(sysdate())
+    return await this.db.query("select ceo_tpr_trips as trips_done ,ceo_tpr_fuel_spent as  diesel_issued from ceo_trailer_per_report where substr(ceo_tpr_dt,1,10) in (substr(now(),1,10),substr(DATE_SUB(now(), INTERVAL 1 DAY),1,10), substr(DATE_SUB(now(), INTERVAL 2 DAY),1,10))");//where date(ceo_tpr_dt)=date(sysdate())
   };
 
   async getTripPerformance (){
-    return await this.db.query("select ceo_tdr_planned, ceo_tdr_loaded, ceo_tdr_empty, ceo_tdr_issign, ceo_tdr_exp_com as completed, ceo_tdr_pending as pending, null as pending_prob, ceo_tdr_dt as date from ceo_trips_day_report where substr(ceo_tdr_dt,1,10) in (substr(now(),1,10),substr(DATE_SUB(now(), INTERVAL 1 DAY),1,10), substr(DATE_SUB(now(), INTERVAL 2 DAY),1,10));")
+    return await this.db.query("select ceo_tdr_planned, ceo_tdr_loaded, ceo_tdr_empty, ceo_tdr_issign, ceo_tdr_exp_com as completed, ceo_tdr_pending as pending, null as pending_prob, ceo_tdr_dt as date from ceo_trips_day_report where substr(ceo_tdr_dt,1,10) in (substr(now(),1,10),substr(DATE_SUB(now(), INTERVAL 1 DAY),1,10), substr(DATE_SUB(now(), INTERVAL 2 DAY),1,10))")
     // return await this.db.query("select ceo_tdr_planned as planned, ceo_tdr_loaded as loaded, ceo_tdr_empty as empt, ceo_tdr_issign as assigned, ceo_tdr_exp_com as completed, ceo_tdr_pending as pending, null as pending_prob, ceo_tdr_dt as date from ceo_trips_day_report");//where date(ceo_tdr_dt)=date(sysdate())
   };
 
