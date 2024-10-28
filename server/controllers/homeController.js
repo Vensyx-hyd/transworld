@@ -19,6 +19,7 @@ class HomeController {
 		this.getRunningLocation=this.getRunningLocation.bind(this);
 		this.getIdleLocation=this.getIdleLocation.bind(this);
 		this.getPlaces=this.getPlaces.bind(this);
+		this.getTransitList=this.getTransitList.bind(this);
 	}
 
 	async getDrivers (req,res) {
@@ -115,6 +116,11 @@ class HomeController {
 	async getPlaces (req,res){
 		var place = await this.service.getPlaces();
 		ReS(res, {message:'Featched Places Successfully.',place:place},200);
+	}
+
+	async getTransitList (req,res){
+		var transitList = await this.service.getTransitList();
+		ReS(res, {message:'Featched TransitList Successfully.',transitList:transitList},200);
 	}
 
 }

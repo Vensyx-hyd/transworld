@@ -26,6 +26,8 @@ class HomeRoutes {
         router.get('/running/location', passport.authenticate('jwt', {session:false}), this.controller.getRunningLocation);
         router.get('/idle/location', passport.authenticate('jwt', {session:false}), this.controller.getIdleLocation);
         router.get('/place', passport.authenticate('jwt', {session:false}), this.controller.getPlaces);
+
+        router.get('/transit/list', passport.authenticate('jwt', {session:false}), this.controller.getTransitList);
         return router;
     }
 }

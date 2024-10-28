@@ -11,6 +11,7 @@ import Trips from "../CFS/Trips/Trips";
 import Communication from "../CFS/Communication/Communication";
 import Fuel from "../CFS/Fuel/Fuel";
 import ManualUpdate from "../CFS/ManualUpdate/ManualUpdate";
+import TransitIncidents from "../CFS/TransitIncidents/TransitIncident";
 
 import Driver from "../Reports/MasterReports/Driver";
 import Trailer from "../Reports/MasterReports/Trailer";
@@ -61,7 +62,8 @@ const PrivateRoutes = {
         ['trips', Trips],
         ['fuel', Fuel],
         ['communication', Communication],
-        ['manual-update', ManualUpdate]
+        ['manual-update', ManualUpdate],
+        ['transit-incidents', TransitIncidents]
     ]),
 
     Admin: new Map([

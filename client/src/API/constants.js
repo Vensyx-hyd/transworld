@@ -82,7 +82,10 @@ export default {
         ["createAttendance", {path: "/drivers/manual/attendance", methods: ['post']}],        
         ["pendencyData", {path: "/report/pendency/all", methods: ["get"]}],
         ["pendencyCreateTrip", {path: "/trips/create/pendency", methods: ['post']}],
-        ["pendencyUpdateTrip", {path: "/trips/pendency/loc", methods: ['put']}],        
+        ["pendencyUpdateTrip", {path: "/trips/pendency/loc", methods: ['put']}],    
+        
+        // Tansit Incidents
+        ["transitList", {path: "/home/transit/list", methods: ['get']}],
 
         // --------------- Admin ------------- //
 

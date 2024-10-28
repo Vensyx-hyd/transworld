@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+  <path fill="#FFFFFF" d="M8 0.5l6.93 12H1.07L8 0.5z"/> <!-- Yellow triangle -->
+  <circle cx="8" cy="11.5" r="0.9" fill="#333"/> <!-- Small inner circle for alert symbol -->
+  <rect x="7.5" y="5.5" width="1" height="4" fill="#333"/> <!-- Exclamation mark line -->
+</svg>

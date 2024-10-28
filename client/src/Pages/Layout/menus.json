@@ -42,6 +42,11 @@
         "title": "Manual Update",
         "icon": "/assets/icons/Admin/manage_users.svg",
         "navLink": "/manual-update"
+      },
+      {
+        "title": "Transit Incident",
+        "icon": "/assets/icons/CFSManager/transit_incident.svg",
+        "navLink": "/transit-incidents"
       }
     ]
   },
